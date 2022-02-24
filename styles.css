@@ -1,0 +1,534 @@
+@import url("https://fonts.googleapis.com/css2?family=Martel+Sans&family=Martel:wght@200;300;400;600;700&family=Metamorphous&family=Michroma&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: 0;
+	/*
+	font-family: "Martel", serif;
+	font-family: "Martel Sans", sans-serif;
+    */
+	font-family: "Michroma", sans-serif;
+}
+
+:root {
+	--orange: #fa7d09;
+}
+
+html {
+	scroll-behavior: smooth;
+	font-size: 14px;
+}
+
+@media screen and (min-width: 1440px) {
+	html {
+		font-size: 16px;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	html {
+		font-size: 13px;
+	}
+}
+
+@media screen and (max-width: 1040px) {
+	html {
+		font-size: 12px;
+	}
+}
+
+body {
+	background: black;
+	color: var(--orange);
+}
+
+.header {
+	width: 100vw;
+	height: 100vh;
+}
+
+.header nav {
+	height: 10vh;
+	margin: auto;
+	width: 90%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.logo h2 {
+	font-family: "Metamorphous", cursive;
+	font-weight: 400;
+}
+
+.header nav ul {
+	list-style: none;
+	display: flex;
+	align-items: center;
+}
+
+.header nav li {
+	color: white;
+	font-size: 1rem;
+	font-family: "Martel Sans", sans-serif;
+}
+
+.header nav li:first-child {
+	margin-right: 3vw;
+}
+
+.header nav li:after {
+	content: "";
+	display: block;
+	width: 100%;
+	border-bottom: 3px solid white;
+}
+
+.header section {
+	margin: auto;
+	width: 90%;
+	height: 90vh;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+.header .text-upper-right {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: flex;
+	align-items: center;
+	transform: rotate(90deg) translate(50%, -600%);
+}
+
+.header .circle {
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	background-color: var(--orange);
+	filter: blur(4px);
+	margin-right: 10px;
+}
+
+.header .text-upper-right p {
+	font-size: 1rem;
+}
+
+.header .text-left {
+	display: flex;
+	flex-direction: column;
+	margin-top: 10vh;
+}
+
+.header .text-left h2 {
+	font-size: 7.5em;
+	width: 40%;
+	font-weight: 400;
+}
+
+.header .text-left p {
+	font-size: 1rem;
+	line-height: 1.5rem;
+	color: white;
+	width: 20%;
+}
+
+.header .text-right {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	left: 30%;
+	top: 42%;
+}
+
+.header .text-right h2 {
+	font-size: 7.5rem;
+	font-weight: 400;
+}
+
+.header .text-right span {
+	font-size: 4.5rem;
+}
+
+.header .text-showreel {
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.5rem;
+}
+
+.header .text-showreel div {
+	position: absolute;
+}
+
+.header .text-showreel .char,
+.header .text-showreel .char2 {
+	position: absolute;
+	font-size: 0.875rem;
+	color: white;
+	font-family: "Martel Sans", sans-serif;
+}
+
+@media screen and (min-width: 1440px) {
+	.header .text-right {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		left: 30%;
+		top: 46%;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.header .text-right {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		left: 30%;
+		top: 40%;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.header .text-right {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		left: 30%;
+		top: 40%;
+	}
+
+	.header .text-left h2 {
+		font-size: 6.5em;
+	}
+
+	.header .text-right h2 {
+		font-size: 6.5rem;
+	}
+
+	.header .text-right span {
+		font-size: 4.5rem;
+	}
+
+	.header .text-upper-right {
+		position: absolute;
+		top: 0;
+		right: 0;
+		display: flex;
+		align-items: center;
+		transform: rotate(90deg) translate(50%, -500%);
+	}
+}
+
+@media screen and (max-width: 880px) {
+	.header .text-right {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		left: 30%;
+		top: 40%;
+	}
+
+	.header .text-left h2 {
+		font-size: 5.6em;
+	}
+
+	.header .text-right h2 {
+		font-size: 5.6rem;
+	}
+
+	.header .text-right span {
+		font-size: 3.6rem;
+	}
+
+	.header .text-upper-right {
+		position: absolute;
+		top: 0;
+		right: 0;
+		display: flex;
+		align-items: center;
+		transform: rotate(90deg) translate(50%, -500%);
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.header .text-right {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		left: 10%;
+		top: 35%;
+	}
+
+	.header .text-left p {
+		font-size: 1rem;
+		line-height: 1.5rem;
+		color: white;
+		width: 40%;
+		position: absolute;
+		top: 60%;
+		left: 0;
+	}
+}
+
+.section1 {
+	margin: auto;
+	width: 90%;
+	height: 80vh;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+}
+
+.section1 > h2 {
+	font-size: 6rem;
+	transform: rotate(270deg) translateX(50%);
+	font-weight: 400;
+}
+
+.section1 > h2 span {
+	margin-left: 20%;
+}
+
+.section1 .services {
+	display: flex;
+	flex-direction: column;
+	color: white;
+	align-self: center;
+	margin-right: 20%;
+}
+
+.section1 .services h3 {
+	margin-bottom: 10px;
+}
+
+.section1 .services ul {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	font-size: 1rem;
+}
+
+.section1 .desc {
+	color: white;
+	align-self: center;
+}
+
+.section1 .desc p {
+	margin-bottom: 30px;
+	font-size: 1rem;
+	font-family: "Martel", serif;
+	letter-spacing: 1px;
+}
+
+.section1 .desc a {
+	color: var(--orange);
+	font-family: "Martel", serif;
+	text-decoration: none;
+}
+
+@media screen and (max-width: 1400px) {
+	.section1 > h2 {
+		font-size: 6.5rem;
+		transform: rotate(270deg) translateX(50%);
+		font-weight: 400;
+	}
+}
+
+@media screen and (max-width: 1350px) {
+	.section1 .services {
+		display: flex;
+		flex-direction: column;
+		color: white;
+		align-self: center;
+		margin-right: 10%;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.section1 .services ul {
+		font-size: 1.2rem;
+	}
+
+	.section1 .desc p {
+		font-size: 1.2rem;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 880px) {
+}
+
+.section2 {
+	margin: auto;
+	width: 90%;
+	position: relative;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.section2 h2 {
+	font-size: 3rem;
+	font-weight: 400;
+	text-align: center;
+	width: 70%;
+	margin: auto;
+	position: absolute;
+	top: 20%;
+	left: 15%;
+}
+
+.section2 ul {
+	list-style: none;
+	position: absolute;
+	top: 35%;
+	right: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+.section2 li {
+	font-size: 0.75rem;
+	line-height: 1.5rem;
+}
+
+.section2 .projects {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-bottom: 5vh;
+}
+
+.section2 .projects p {
+	color: white;
+	font-size: 1rem;
+	font-family: "Martel", serif;
+	margin: 5px 0;
+}
+
+.section2 .projects > h3 {
+	font-weight: 400;
+	font-family: "Martel", serif;
+}
+
+.section2 #prj1,
+.section2 #prj5 {
+	align-self: flex-end;
+	margin-right: 10%;
+}
+
+.section2 #prj3,
+.section2 #prj6 {
+	align-self: center;
+}
+
+@media screen and (max-width: 1024px) {
+	.section2 h2 {
+		font-size: 3rem;
+		font-weight: 400;
+		text-align: center;
+		width: 80%;
+		margin: auto;
+		position: absolute;
+		top: 20%;
+		left: 10%;
+	}
+}
+
+.section3 {
+	width: 100%;
+	margin: auto;
+}
+
+.section3 h2 {
+	width: 90%;
+	margin: auto;
+	font-size: 3rem;
+	font-weight: 400;
+	margin-bottom: 20px;
+}
+
+.section3 > h2:nth-child(2) {
+	text-decoration: underline;
+}
+
+.section3 #no-line {
+	text-decoration: none;
+}
+
+.section3 div {
+	width: 100%;
+	background: white;
+	height: 35px;
+}
+
+.section3 ul {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	list-style: none;
+}
+
+.section3 ul li::before {
+	content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+	color: black; /* Change the color */
+	font-weight: bold; /* If you want it to be bold */
+	display: inline-block; /* Needed to add space between the bullet and the text */
+	width: 1em; /* Also needed for space (tweak if needed) */
+	margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+.section3 li {
+	font-size: 1.5rem;
+}
+
+footer {
+	margin: auto;
+	padding: 10vh 0;
+	width: 90%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+footer h2 {
+	width: 30%;
+	font-size: 1.5rem;
+	font-weight: 400;
+}
+
+footer div {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+footer div h2 {
+	font-size: 1.5rem;
+	margin-bottom: 10px;
+	width: 100%;
+}
+
+footer ul {
+	width: 10%;
+	list-style: none;
+}
+
+footer ul li {
+	font-size: 0.75rem;
+	line-height: 1.5rem;
+}
+
+footer div p {
+	font-size: 0.75rem;
+}
