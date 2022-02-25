@@ -61,7 +61,13 @@ gsap.registerPlugin(ScrollTrigger);
 // setting up locomotive scroll
 const locoScroll = new LocomotiveScroll({
     el: document.querySelector('.smooth-scroll'),
-    smooth: true
+    smooth: true,
+     smartphone: {
+        smooth: true
+    },
+    tablet: {
+        smooth: true
+    }
   });
   // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
   locoScroll.on("scroll", ScrollTrigger.update);
