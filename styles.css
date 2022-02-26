@@ -20,11 +20,6 @@ html {
 	font-size: 14px;
 }
 
-html.has-scroll-smooth {
-	overflow: auto;
-	overflow-x: hidden;
-}
-
 html,
 body {
 	overflow-x: hidden;
