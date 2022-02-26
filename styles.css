@@ -107,10 +107,11 @@ body {
 .header {
 	width: 100vw;
 	height: 100vh;
+	min-height: 911px;
 }
 
 .header nav {
-	height: 10vh;
+	height: 10%;
 	margin: auto;
 	width: 90%;
 	display: flex;
@@ -160,7 +161,7 @@ body {
 .header section {
 	margin: auto;
 	width: 90%;
-	height: 90vh;
+	height: 90%;
 	display: flex;
 	flex-direction: column;
 	position: relative;
@@ -601,6 +602,7 @@ body {
 	margin: auto;
 	width: 90%;
 	height: 60vh;
+	min-height: 600px;
 	display: flex;
 	align-items: flex-end;
 	justify-content: center;
@@ -621,7 +623,8 @@ body {
 	flex-direction: column;
 	color: white;
 	align-self: center;
-	margin-right: 10%;
+	margin-right: 5%;
+	width: 70%;
 }
 
 .section1 .services h3 {
@@ -635,6 +638,7 @@ body {
 	list-style: none;
 	display: flex;
 	flex-direction: column;
+	width: 100%;
 	font-size: 1rem;
 }
 
@@ -683,7 +687,7 @@ body {
 	}
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1240px) {
 	.section1 > h2 {
 		font-size: 6rem;
 		transform: rotate(270deg) translateX(50%);
@@ -700,7 +704,7 @@ body {
 		flex-direction: column;
 		color: white;
 		align-self: center;
-		width: 33%;
+		width: 70%;
 		margin-right: 5%;
 	}
 
@@ -713,11 +717,11 @@ body {
 	}
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
 	.section1 {
 		margin: auto;
 		width: 90%;
-		min-height: 70vh;
+		min-height: 700px;
 		display: flex;
 		align-items: flex-start;
 		justify-content: center;
@@ -741,7 +745,7 @@ body {
 
 	.section1 .services {
 		align-self: flex-start;
-		width: 50%;
+		width: 60%;
 		margin-right: 0;
 	}
 
@@ -786,6 +790,7 @@ body {
 	text-align: center;
 	width: 70%;
 	margin: auto;
+	margin-bottom: 10vh;
 	position: absolute;
 	top: 20%;
 	left: 15%;

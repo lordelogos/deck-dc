@@ -1,3 +1,10 @@
+// custom cursor
+let cursor = document.querySelector('.cursor')
+
+document.addEventListener('mousemove', e => {
+    cursor.setAttribute('style', `top: ${e.pageY -10}px; left: ${e.pageX -10}px`)
+})
+
 // round text at header
 let roundedText = document.querySelectorAll('.text-showreel > div > .char');
 let roundedText2 = document.querySelectorAll('.text-showreel > div > .char2');
@@ -116,17 +123,18 @@ window.addEventListener('load', () => {
 let s1_tl = gsap.timeline({defaults: {ease: 'power4.inOut'}, scrollTrigger: {trigger: '.section1', scroller: '.smooth-scroll', start: 'top bottom', toggleActions: "play none none reset"}})
 
 s1_tl.from('.section1 h2', {opacity: 0, yPercent: 100, duration: 1.5})
-.to('.services h3', {clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", y: 0, opacity: 1, scrollTrigger: {
-    scroller: '.smooth-scroll',
-    scrub: true
-}}, '-=1')
+.to('.services h3', {clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", y: 0, opacity: 1}, '-=1')
 .to('.services ul li', {clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", stagger: .1, y:0, opacity: 1}, '-=1')
 .to('.desc', { clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", y: 0, opacity: 1, duration: 1.5}, '-=1')
 
 // let project_tl = gsap.timeline({defaults: {ease: 'power4.inOut'}, scrollTrigger:{trigger: ".section2", scrub: 1, pin: ".section2 h2"}});
 
 gsap.to('.section2 h2', { scrollTrigger:{
-    trigger: '.section2', scrub: 1, pin:'.section2 h2', start: 'top top', end: '+=1300px'
+    trigger: '.section2 h2', scrub: 1, pin:'.section2 h2', start: 'bottom center', end: '+=1300px'
+}})
+
+gsap.to('.section2 ul', { scrollTrigger:{
+    trigger: '.section2 ul', scrub: 1, pin:'.section2 ul', start: 'top center', end: '+=1300px'
 }})
 
 
