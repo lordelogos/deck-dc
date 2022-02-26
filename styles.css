@@ -545,7 +545,7 @@ body {
 		display: flex;
 		flex-direction: column;
 		left: 10%;
-		top: 36%;
+		top: 38%;
 	}
 
 	.header .text-left p {
@@ -555,7 +555,7 @@ body {
 		width: 45%;
 		min-width: 220px;
 		position: absolute;
-		top: 54%;
+		top: 56%;
 		left: 0;
 	}
 
@@ -644,71 +644,63 @@ body {
 }
 
 /* for short screens */
-@media screen and (max-height: 880px) {
+@media screen and (max-height: 880px) and (max-width: 450px) {
 	:root {
 		--screen-height: 880px;
 	}
 
 	.header .text-right {
-		position: absolute;
-		display: flex;
-		flex-direction: column;
-		left: 10%;
-		top: calc(32 * var(--screen-height) / 100);
+		top: calc(36 * var(--screen-height) / 100);
 	}
 
 	.header .text-left p {
-		font-size: 1rem;
-		line-height: 1.5rem;
-		color: white;
-		width: 45%;
-		min-width: 220px;
-		position: absolute;
-		top: calc(46 * var(--screen-height) / 100);
+		top: calc(54 * var(--screen-height) / 100);
 		left: 0;
 	}
 }
 
-@media screen and (max-height: 820px) {
+@media screen and (max-height: 820px) and (max-width: 450px) {
 	:root {
 		--screen-height: 820px;
 	}
-}
 
-@media screen and (max-height: 740px) {
-	:root {
-		--screen-height: 760px;
+	.header .text-right {
+		top: calc(37 * var(--screen-height) / 100);
+	}
+
+	.header .text-left p {
+		top: calc(56 * var(--screen-height) / 100);
+		left: 0;
 	}
 }
 
-@media screen and (max-height: 660px) {
+@media screen and (max-height: 740px) and (max-width: 450px) {
+	:root {
+		--screen-height: 760px;
+	}
+
+	.header .text-right {
+		top: calc(38 * var(--screen-height) / 100);
+	}
+
+	.header .text-left p {
+		top: calc(59 * var(--screen-height) / 100);
+		left: 0;
+	}
+}
+
+@media screen and (max-height: 660px) and (max-width: 450px) {
 	:root {
 		--screen-height: 700px;
 	}
 
 	.header .text-right {
 		left: 10%;
-		top: calc(34 * var(--screen-height) / 100);
+		top: calc(39 * var(--screen-height) / 100);
 	}
 
 	.header .text-left p {
-		top: calc(50 * var(--screen-height) / 100);
-		left: 0;
-	}
-}
-
-@media screen and (max-height: 600px) {
-	:root {
-		--screen-height: 640px;
-	}
-
-	.header .text-right {
-		left: 10%;
-		top: calc(36 * var(--screen-height) / 100);
-	}
-
-	.header .text-left p {
-		top: calc(54 * var(--screen-height) / 100);
+		top: calc(62 * var(--screen-height) / 100);
 		left: 0;
 	}
 }
