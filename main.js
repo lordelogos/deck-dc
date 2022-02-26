@@ -1,9 +1,13 @@
-// custom cursor
-let cursor = document.querySelector('.cursor')
+// moving slider
+const root = document.documentElement;
+const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
+const marqueeContent = document.querySelector("ul.marquee-content");
 
-document.addEventListener('mousemove', e => {
-    cursor.setAttribute('style', `top: ${e.pageY -10}px; left: ${e.pageX -10}px`)
-})
+root.style.setProperty("--marquee-elements", marqueeContent.children.length);
+
+for(let i=0; i<marqueeElementsDisplayed; i++) {
+  marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
+}
 
 // round text at header
 let roundedText = document.querySelectorAll('.text-showreel > div > .char');

@@ -240,9 +240,16 @@ body {
 
 .header .text-left p {
 	font-size: 1rem;
+	font-family: "Martel", serif;
 	line-height: 1.5rem;
 	color: white;
 	width: 20%;
+}
+
+.header .text-left p svg {
+	display: inline;
+	width: 1rem;
+	height: 1rem;
 }
 
 .header .text-right {
@@ -533,6 +540,25 @@ body {
 }
 
 @media screen and (max-width: 440px) {
+	.header .text-right {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		left: 10%;
+		top: 36%;
+	}
+
+	.header .text-left p {
+		font-size: 1rem;
+		line-height: 1.5rem;
+		color: white;
+		width: 45%;
+		min-width: 220px;
+		position: absolute;
+		top: 54%;
+		left: 0;
+	}
+
 	.header .text-left h2 {
 		font-size: 4em;
 	}
@@ -547,6 +573,25 @@ body {
 }
 
 @media screen and (max-width: 380px) {
+	.header .text-right {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		left: 10%;
+		top: 36%;
+	}
+
+	.header .text-left p {
+		font-size: 1rem;
+		line-height: 1.5rem;
+		color: white;
+		width: 45%;
+		min-width: 220px;
+		position: absolute;
+		top: 52%;
+		left: 0;
+	}
+
 	.header .text-left h2 {
 		font-size: 3.5em;
 	}
@@ -566,7 +611,7 @@ body {
 		display: flex;
 		flex-direction: column;
 		left: 10%;
-		top: 36%;
+		top: 34%;
 	}
 
 	.header .text-left p {
@@ -576,7 +621,7 @@ body {
 		width: 45%;
 		min-width: 220px;
 		position: absolute;
-		top: 52%;
+		top: 48%;
 		left: 0;
 	}
 	.header .text-left h2 {
@@ -951,11 +996,15 @@ body {
 	margin: auto;
 	font-size: 3rem;
 	font-weight: 400;
-	margin-bottom: 20px;
 }
 
 .section3 > h2:nth-child(2) {
 	text-decoration: underline;
+	margin-bottom: 20px;
+}
+
+#mobile-break {
+	display: none;
 }
 
 .section3 #no-line {
@@ -965,7 +1014,6 @@ body {
 .section3 div {
 	width: 100%;
 	background: white;
-	height: 35px;
 	overflow-x: hidden;
 }
 
@@ -998,15 +1046,117 @@ body {
 	font-size: 1.5rem;
 }
 
+:root {
+	--marquee-width: 80vw;
+	--marquee-height: 20vh;
+	/* --marquee-elements: 12; */ /* defined with JavaScript */
+	--marquee-elements-displayed: 5;
+	--marquee-element-width: calc(
+		var(--marquee-width) / var(--marquee-elements-displayed)
+	);
+	--marquee-animation-duration: calc(var(--marquee-elements) * 3s);
+}
+
+.marquee {
+	width: var(--marquee-width);
+	height: var(--marquee-height);
+	min-height: 35px;
+	max-height: 35px;
+	background-color: #fff;
+	color: var(--orange);
+	overflow: hidden;
+	position: relative;
+}
+.marquee:before,
+.marquee:after {
+	position: absolute;
+	top: 0;
+	width: 10rem;
+	height: 100%;
+	content: "";
+	z-index: 1;
+}
+
+.marquee-content {
+	list-style: none;
+	height: 100%;
+	display: flex;
+	animation: scrolling var(--marquee-animation-duration) linear infinite;
+	animation-play-state: paused;
+}
+
+.section3 h2:nth-child(2):hover + .marquee > .marquee-content {
+	animation-play-state: running;
+}
+
+@keyframes scrolling {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(
+			calc(-1 * var(--marquee-element-width) * var(--marquee-elements))
+		);
+	}
+}
+.marquee-content li {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* text-align: center; */
+	flex-shrink: 0;
+	width: var(--marquee-element-width);
+	max-height: 100%;
+	font-size: 1.5rem; /* 5rem; */
+	white-space: nowrap;
+}
+
+.marquee-content li img {
+	width: 100%;
+	/* height: 100%; */
+	border: 2px solid #eee;
+}
+
+@media screen and (max-width: 1024px) {
+	:root {
+		--marquee-width: 100vw;
+		--marquee-height: 16vh;
+		--marquee-elements-displayed: 3;
+	}
+}
+
 @media screen and (max-width: 767px) {
 	.section3 h2 {
 		font-size: 2rem;
+	}
+
+	:root {
+		--marquee-width: 100vw;
+		--marquee-height: 16vh;
+		--marquee-elements-displayed: 3;
+	}
+}
+
+@media (max-width: 600px) {
+	:root {
+		--marquee-width: 100vw;
+		--marquee-height: 16vh;
+		--marquee-elements-displayed: 2;
+	}
+	.marquee:before,
+	.marquee:after {
+		width: 5rem;
 	}
 }
 
 @media screen and (max-width: 440px) {
 	.section3 h2 {
-		font-size: 1.5rem;
+		font-size: 3rem;
+	}
+
+	.section3 > h2:nth-child(2) {
+		text-decoration: underline;
+		margin-bottom: 30px;
 	}
 
 	.section3 div li {
@@ -1015,6 +1165,10 @@ body {
 
 	.section3 li {
 		font-size: 1.4rem;
+	}
+
+	#mobile-break {
+		display: block;
 	}
 }
 
