@@ -203,6 +203,20 @@ body {
 	display: block;
 }
 
+@media screen and (max-width: 767px) {
+	.floating-vid {
+		display: none;
+	}
+
+	.floating-img {
+		display: none;
+	}
+
+	.text-upper-right:hover .floating-vid {
+		display: none;
+	}
+}
+
 .header .circle {
 	width: 24px;
 	height: 24px;
