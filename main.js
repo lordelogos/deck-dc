@@ -1,3 +1,15 @@
+//floating showreel gif
+// const showreel = document.querySelector('.text-upper-right');
+// const showreelVideo = document.querySelector('.floating-vid');
+// document.addEventListener('mouseover', e => {
+//   showreelVideo.setAttribute('style', `transform: translate3d(${e.pageX}px, ${e.pageY}px, 0px);`);
+// })
+
+// showreel.addEventListener('mouseleave', () => {
+//   showreelVideo.setAttribute('style', "visibility: hidden;")
+// })
+
+
 // moving slider
 const root = document.documentElement;
 const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
@@ -97,6 +109,7 @@ const locoScroll = new LocomotiveScroll({
 
 
 
+
 // page animation
 let hero_tl = gsap.timeline({defaults: {ease: "power4.inOut", duration: 2}});
 
@@ -107,20 +120,6 @@ hero_tl
 .from('.text-showreel', {opacity: 0, rotate: 360, scale: .5}, '-=2s')
 
 // load screen animation
-// disable scroll
-locoScroll.stop()
-hero_tl.pause()
-// remove loader
-window.addEventListener('load', () => {
-    // remove loader animation
-    setTimeout(() => {
-    gsap.to('#preloader', {yPercent: -110, duration: 1.5});
-    hero_tl.paused(false)
-    }, 2000)
-    // restart scroll
-    locoScroll.start()
-}) 
-// enable scroll
 
 
 
@@ -190,3 +189,19 @@ parallax2.forEach(elem => {
   });
 });
 
+
+  // disable scroll
+  locoScroll.stop()
+  hero_tl.pause()
+  // remove loader
+  window.addEventListener('load', () => {
+      // remove loader animation
+      setTimeout(() => {
+      gsap.to('#preloader', {yPercent: -110, duration: 1.5});
+      hero_tl.paused(false)
+      }, 2000)
+      // restart scroll
+      locoScroll.start()
+  }) 
+  // enable scroll
+  
